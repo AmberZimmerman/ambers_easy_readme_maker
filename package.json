@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AmberZimmerman/ambers_easy_readme_maker/issues"
   },
-  "homepage": "https://github.com/AmberZimmerman/ambers_easy_readme_maker#readme"
+  "homepage": "https://github.com/AmberZimmerman/ambers_easy_readme_maker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
