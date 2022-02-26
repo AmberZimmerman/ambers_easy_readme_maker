@@ -5,7 +5,8 @@ const util = require('util');
 
 // TODO: Create an array of questions for user input
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-const questions = [
+inquirer
+    .prompt([
         {
             type: 'input',
             message: 'What is your name?',
@@ -78,17 +79,25 @@ const questions = [
             name: 'questions',
             default: 'Project screenshot here',
         },
-    ]
+    ])
+
+    .then(function(response) {
+        console.log(response);
+    });
+
 
 
 // TODO: Create a function to write README file
-function writeToFile('README.md', data) {
-    fs.writeFile('README.md', data, (err) => 
-       err ? console.error(err) : console.log('success!')
-    )};
+// function writeToFile('README.md', data) {
+//     fs.writeFile('README.md', data, (err) => 
+//        err ? console.error(err) : console.log('success!')
+//     )};
 
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {
+//     const userResponses = inquirer.prompt(questions);
+//     console.log(`You're responses: `, userResponses);
+// };
 
 // Function call to initialize app
-init();
+// init();
