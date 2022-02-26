@@ -2,11 +2,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const writeAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-inquirer
-    .prompt([
+const questions = () =>
+    inquirer.prompt([
         {
             type: 'input',
             message: 'What is your name?',
@@ -31,12 +32,7 @@ inquirer
             name: 'deployed',
             default: 'Link for deployed project here',
         }, 
-        {
-            type: 'input',
-            message: 'What command should be run to install dependencies?',
-            name: 'installation',
-            default: 'What command should be run',
-        }, 
+    
         {
             type: 'list',
             message: "Choose a license for your project.",
@@ -48,6 +44,12 @@ inquirer
             message: 'What is a description of the project?',
             name: 'description',
             default: 'General description here',
+        },
+        {
+            type: 'input',
+            message: 'What command should be run to install dependencies?',
+            name: 'installation',
+            default: 'What command should be run',
         }, 
         {
             type: 'input',
@@ -72,32 +74,47 @@ inquirer
             message: 'Insert a screenshot of the project',
             name: 'screenshot',
             default: 'Project screenshot here',
-        },
-        {
-            type: 'input',
-            message: 'Questions',
-            name: 'questions',
-            default: 'Project screenshot here',
-        },
+        }
     ])
 
-    .then(function(response) {
-        console.log(response);
-    });
 
 
-
-// TODO: Create a function to write README file
-// function writeToFile('README.md', data) {
-//     fs.writeFile('README.md', data, (err) => 
-//        err ? console.error(err) : console.log('success!')
-//     )};
 
 // TODO: Create a function to initialize app
-// function init() {
-//     const userResponses = inquirer.prompt(questions);
-//     console.log(`You're responses: `, userResponses);
-// };
+// function init(data) {
+    return`# ${data.title}  
+    ${data.description}
+    ## Table of Contents:
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
+    ### Installation:
+    In order to install the necessary dependencies, open the console and run the following:
+    \`\`\`${data.installations}\`\`\`
+    ### Usage:
+    ${data.usage}
+    ### License:
+    This project is licensed under:
+    ${data.license}
+    ### Contributing:
+    ${data.contribute}
+    ### Tests:
+    In order to test open the console and run the following:
+    \`\`\`${data.tests}\`\`\`
+    ### Questions:
+    If you have any questions contact me on [GitHub](https://github.com/${data.username})  
+    `
+    
+    
+};
+
+// TODO: Create a function to write README file
+    // fs.writeFile('README.md', data, (err) => 
+    //    err ? console.error(err) : console.log('success!')
+    // );
 
 // Function call to initialize app
 // init();
