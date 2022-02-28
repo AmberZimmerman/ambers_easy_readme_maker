@@ -81,8 +81,14 @@ const questions = () =>
 
 
 // TODO: Create a function to initialize app
-// function init(data) {
-    return`# ${data.title}  
+function init(data) {
+    return`# ${data.title}
+    ### License:
+    This project is licensed under:
+    ${data.license} 
+    ###Link to deployed project:
+    ${data.deployed}
+    ###Description of the project:
     ${data.description}
     ## Table of Contents:
     * [Installation](#installation)
@@ -91,25 +97,21 @@ const questions = () =>
     * [Contributing](#contributing)
     * [Tests](#tests)
     * [Questions](#questions)
+    * [Screenshots](#screenshot)
     ### Installation:
     In order to install the necessary dependencies, open the console and run the following:
     \`\`\`${data.installations}\`\`\`
     ### Usage:
     ${data.usage}
-    ### License:
-    This project is licensed under:
-    ${data.license}
     ### Contributing:
-    ${data.contribute}
+    ${data.contributing}
     ### Tests:
     In order to test open the console and run the following:
     \`\`\`${data.tests}\`\`\`
     ### Questions:
     If you have any questions contact me on [GitHub](https://github.com/${data.username})  
-    `
-    
-    
-};
+    `  }
+
 
 // TODO: Create a function to write README file
     // fs.writeFile('README.md', data, (err) => 
@@ -117,4 +119,4 @@ const questions = () =>
     // );
 
 // Function call to initialize app
-// init();
+init();
