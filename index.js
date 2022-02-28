@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const writeAsync = util.promisify(fs.writeFile);
+
 
 // TODO: Create an array of questions for user input
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -75,48 +75,55 @@ const questions = () =>
             name: 'screenshot',
             default: 'Project screenshot here',
         }
-    ])
-
-
+    ]);
 
 
 // TODO: Create a function to initialize app
 function init(data) {
-    return`# ${data.title}
-    ### License:
-    This project is licensed under:
-    ${data.license} 
-    ###Link to deployed project:
-    ${data.deployed}
-    ###Description of the project:
-    ${data.description}
-    ## Table of Contents:
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    * [Screenshots](#screenshot)
-    ### Installation:
-    In order to install the necessary dependencies, open the console and run the following:
-    \`\`\`${data.installations}\`\`\`
-    ### Usage:
-    ${data.usage}
-    ### Contributing:
-    ${data.contributing}
-    ### Tests:
-    In order to test open the console and run the following:
-    \`\`\`${data.tests}\`\`\`
-    ### Questions:
-    If you have any questions contact me on [GitHub](https://github.com/${data.username})  
-    `  }
+return`# ${data.title}
+### License: 
+This project is licensed under:
+${data.license} 
+### Link to deployed project:
+${data.deployed}
+###Description of the project:
+${data.description}
+## Table of Contents:
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [Screenshots](#screenshot)
+### Installation:
+In order to install the necessary dependencies, open the console and run the following:
+\`\`\`${data.installations}\`\`\`
+### Usage:
+${data.usage}
+### Contributing:
+${data.contributing}
+### Tests:
+In order to test open the console and run the following:
+\`\`\`${data.tests}\`\`\`
+### Questions:
+If you have any questions contact me on [GitHub](https://github.com/${data.username}) 
+### Screenshot: 
+`  
+    }
+
+    const writeAsync = util.promisify(fs.writeFile);
+
+    questions()
+    .then((data) => writeAsync('README.md', init(data)))
+        .then(() => console.log('You made a readme'))
+        .catch((err) => console.error(err));
 
 
-// TODO: Create a function to write README file
+
+        // TODO: Create a function to write README file
     // fs.writeFile('README.md', data, (err) => 
     //    err ? console.error(err) : console.log('success!')
     // );
 
 // Function call to initialize app
-init();
