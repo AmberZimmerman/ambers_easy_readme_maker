@@ -1,12 +1,15 @@
 # Project Title
-### License: 
-This project is licensed under:
-MIT 
+### License:
+![License](https://img.shields.io/badge/License-undefined-blue.svg)
+
+
 ### Link to deployed project:
-Link for deployed project here
-###Description of the project:
+www.facebook.com
+### Description of the project:
 General description here
-## Table of Contents:
+[Up to date description of license here](https://opensource.org/licenses/undefined)
+## Table of Contents: 
+* [Description] (#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -27,4 +30,4 @@ In order to test open the console and run the following:
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/AmberZimmerman) 
 ### Screenshot:
-![My Image](pattern.jpg) 
+![My Image](Project screenshot here) 

@@ -30,14 +30,14 @@ const questions = () =>
             type: 'input',
             message: 'What is the link for the deployed project?',
             name: 'deployed',
-            default: 'Link for deployed project here',
+            default: 'Link for the deployed project is unavailable',
         }, 
     
         {
             type: 'list',
-            message: "Choose a license for your project.",
-            choices: ['MIT', 'Mozilla Public License 2.0','GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3',  'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense', 'BSD 3'],
-            name: 'license'
+            message: 'Choose a license for your project.',
+            choices: ['MIT', 'GNUAGPLv3', 'GNUGPLv3', 'GNULGPLv3',  'ApacheLicense2.0', 'TheUnlicense', 'BSD3'],
+            name: 'There is no license for this project'
         },
         {
             type: 'input',
@@ -81,14 +81,16 @@ const questions = () =>
 // TODO: Create a function to initialize app
 function init(data) {
 return`# ${data.title}
-### License: 
-This project is licensed under:
-${data.license} 
+### License:
+![License](https://img.shields.io/badge/License-${data.license}-blue.svg)
+### License Description:
+[Up to date description of license here](https://opensource.org/licenses/${data.license})
 ### Link to deployed project:
 ${data.deployed}
-###Description of the project:
+### Description of the project:
 ${data.description}
-## Table of Contents:
+## Table of Contents: 
+* [Description] (#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -113,10 +115,10 @@ If you have any questions contact me on [GitHub](https://github.com/${data.usern
 `  
     }
 
-    const writeAsync = util.promisify(fs.writeFile);
+    const writeToFile = util.promisify(fs.writeFile);
 
     questions()
-    .then((data) => writeAsync('README.md', init(data)))
+    .then((data) => writeToFile('README.md', init(data)))
         .then(() => console.log('You made a readme'))
         .catch((err) => console.error(err));
 
