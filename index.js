@@ -108,7 +108,8 @@ In order to test open the console and run the following:
 \`\`\`${data.tests}\`\`\`
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/${data.username}) 
-### Screenshot: 
+### Screenshot:
+![My Image](${data.screenshot}) 
 `  
     }
 
