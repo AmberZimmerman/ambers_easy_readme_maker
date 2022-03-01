@@ -1,27 +1,27 @@
 # Project Title
 ### License:
-![License](https://img.shields.io/badge/License-undefined-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ### License Description:
-[Up to date description of license here](https://opensource.org/licenses/undefined)
+[Up to date description of license here](https://opensource.org/licenses/MIT)
 ### Link to deployed project:
 Link for the deployed project is unavailable
 ### Description of the project:
 General description here
 ## Table of Contents: 
-* [Description] (#description)
+* [Description](#description)
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage Instructions](#usage-instructions)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contribution Guidelines](#contribution-guidelines)
 * [Tests](#tests)
 * [Questions](#questions)
 * [Screenshots](#screenshot)
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 ```undefined```
-### Usage:
+### Usage Instructions:
 usage here
-### Contributing:
+### Contribution Guidelines:
 How can a user contribute
 ### Tests:
 In order to test open the console and run the following:

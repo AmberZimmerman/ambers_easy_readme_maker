@@ -37,7 +37,7 @@ const questions = () =>
             type: 'list',
             message: 'Choose a license for your project.',
             choices: ['MIT', 'GNUAGPLv3', 'GNUGPLv3', 'GNULGPLv3',  'ApacheLicense2.0', 'TheUnlicense', 'BSD3'],
-            name: 'There is no license for this project'
+            name: 'license'
         },
         {
             type: 'input',
@@ -67,13 +67,13 @@ const questions = () =>
             type: 'input',
             message: 'If applicable, provide any tests written for your application and provide examples on how to run them.',
             name: 'tests',
-            default: 'How can a user contribute',
+            default: 'There are no tests to run for this project',
         },
         {
             type: 'input',
             message: 'Insert a screenshot of the project',
             name: 'screenshot',
-            default: 'Project screenshot here',
+            default: 'Project screenshot not available for this project',
         }
     ]);
 
@@ -84,26 +84,26 @@ return`# ${data.title}
 ### License:
 ![License](https://img.shields.io/badge/License-${data.license}-blue.svg)
 ### License Description:
-[Up to date description of license here](https://opensource.org/licenses/${data.license})
+[Click here for the most current description of this license](https://opensource.org/licenses/${data.license})
 ### Link to deployed project:
 ${data.deployed}
-### Description of the project:
-${data.description}
 ## Table of Contents: 
 * [Description](#description)
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage Instructions](#usage-instructions)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contribution Guidelines](#contribution-guidelines)
 * [Tests](#tests)
 * [Questions](#questions)
 * [Screenshots](#screenshot)
+### Description of the project:
+${data.description}
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 \`\`\`${data.installations}\`\`\`
-### Usage:
+### Usage Instructions:
 ${data.usage}
-### Contributing:
+### Contribution Guidelines:
 ${data.contributing}
 ### Tests:
 In order to test open the console and run the following:
@@ -117,6 +117,7 @@ If you have any questions contact me on [GitHub](https://github.com/${data.usern
 
     const writeToFile = util.promisify(fs.writeFile);
 
+// Function call to initialize app
     questions()
     .then((data) => writeToFile('README.md', init(data)))
         .then(() => console.log('You made a readme'))
@@ -129,4 +130,4 @@ If you have any questions contact me on [GitHub](https://github.com/${data.usern
     //    err ? console.error(err) : console.log('success!')
     // );
 
-// Function call to initialize app
+
