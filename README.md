@@ -1,13 +1,12 @@
 # Project Title
 ### License:
 ![License](https://img.shields.io/badge/License-undefined-blue.svg)
-
-
+### License Description:
+[Up to date description of license here](https://opensource.org/licenses/undefined)
 ### Link to deployed project:
-www.facebook.com
+Link for the deployed project is unavailable
 ### Description of the project:
 General description here
-[Up to date description of license here](https://opensource.org/licenses/undefined)
 ## Table of Contents: 
 * [Description] (#description)
 * [Installation](#installation)
