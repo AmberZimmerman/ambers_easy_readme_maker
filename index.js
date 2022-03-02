@@ -36,7 +36,7 @@ const questions = () =>
         {
             type: 'list',
             message: 'Choose a license for your project.',
-            choices: ['MIT', 'GNUAGPLv3', 'GNUGPLv3', 'GNULGPLv3',  'ApacheLicense2.0', 'TheUnlicense', 'BSD3'],
+            choices: ['MIT', 'BSD-2-Clause', 'gpl-license', 'GNUAGPLv3', 'GNUGPLv3', 'GNULGPLv3',  'Apache-2.0', 'lgpl-license', 'BSD-3-Clause'],
             name: 'license'
         },
         {
@@ -49,7 +49,7 @@ const questions = () =>
             type: 'input',
             message: 'What command should be run to install dependencies?',
             name: 'installation',
-            default: 'What command should be run',
+            default: 'No installation required at this time',
         }, 
         {
             type: 'input',

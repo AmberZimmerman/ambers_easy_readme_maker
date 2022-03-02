@@ -1,12 +1,10 @@
 # Project Title
 ### License:
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
 ### License Description:
-[Up to date description of license here](https://opensource.org/licenses/MIT)
+[Click here for the most current description of this license](https://opensource.org/licenses/Apache-2.0)
 ### Link to deployed project:
 Link for the deployed project is unavailable
-### Description of the project:
-General description here
 ## Table of Contents: 
 * [Description](#description)
 * [Installation](#installation)
@@ -16,6 +14,8 @@ General description here
 * [Tests](#tests)
 * [Questions](#questions)
 * [Screenshots](#screenshot)
+### Description of the project:
+General description here
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
 ```undefined```
@@ -25,8 +25,8 @@ usage here
 How can a user contribute
 ### Tests:
 In order to test open the console and run the following:
-```How can a user contribute```
+```There are no tests to run for this project```
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/AmberZimmerman) 
 ### Screenshot:
-![My Image](Project screenshot here) 
+![My Image](Project screenshot not available for this project) 
