@@ -80,7 +80,7 @@ const questions = () =>
     ]);
 
 
-// TODO: Create a function to initialize app
+// TODO: Create a function to initialize app and write readme file
 const init = () => {
     questions()
         .then((data) => writeToFile('README.md', genMark.generateMarkdown(data)))
@@ -91,9 +91,5 @@ const init = () => {
 // Function call to initialize app
 init();
 
-        // TODO: Create a function to write README file
-    // fs.writeFile('README.md', data, (err) => 
-    //    err ? console.error(err) : console.log('success!')
-    // );
-
+ 
 

@@ -6,24 +6,31 @@ let licenseBadge;
 switch (license) {
   case license = 'MIT':
     licenseBadge = '[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)';
+    licenseLink = "https://opensource.org/licenses/MIT";
     break;
   case license = 'BSD-2-Clause':
       licenseBadge = '[![License](https://img.shields.io/badge/License-BSD_2-Clause-green.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+      licenseLink = "hhttps://opensource.org/licenses/BSD-2-Clause";
       break;
   case license = 'GNUAGPLv3':
     licenseBadge = '[![License](https://img.shields.io/badge/License-GNUAGPLv3-green.svg)](https://www.gnu.org/licenses/GPL-3.0)';
+    licenseLink = "https://www.gnu.org/licenses/GPL-3.0";
     break;
   case license = 'BSD-3-Clause':
     licenseBadge = '[![License](https://img.shields.io/badge/License-BSD_3.0-Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+    licenseLink = "https://opensource.org/licenses/BSD-3-Clause";
     break;
   case license = 'GNULGPLv3':
       licenseBadge = '[![License](https://img.shields.io/badge/License-GNULGPLv3-green.svg)](https://www.gnu.org/licenses/LGPL-3.0)';
+      licenseLink = "https://www.gnu.org/licenses/LGPL-3.0";
       break;
   case license = 'Apache-2.0':
     licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)';
+    licenseLink = "https://opensource.org/licenses/Apache-2.0";
     break;
   case license = 'Mozilla-v2.0':
     licenseBadge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-green.svg)](https://opensource.org/licenses/MPL-2.0)';
+    licenseLink = "https://opensource.org/licenses/MPL-2.0";
     break;
 }
 
@@ -37,7 +44,7 @@ return`# ${title}
 ### License:
 ${licenseBadge} 
 ### License Description:
-[Click here for the most current description of this license]
+[Click here for the most current description of this license](${licenseLink})
 ### Link to deployed project:
 ${deployed}
 ## Table of Contents: 
