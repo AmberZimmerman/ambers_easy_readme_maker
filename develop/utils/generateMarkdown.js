@@ -1,22 +1,31 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   if ('MIT') {
-//     return `https://img.shields.io/badge/License-MIT-green.svg`
-//   } else {
-//     return "";
-//   }
-// };
+const generateBadge = () => {
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   if ('MIT') {
-//     return `https://opensource.org/licenses/MIT`
-//   } else {
-//     return "";
-//   }
-// }
+let licenseBadge;
+
+switch (license) {
+  case license = 'MIT':
+    licenseBadge = '[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)';
+    break;
+  case license = 'BSD-2-Clause':
+      licenseBadge = '[![License](https://img.shields.io/badge/License-BSD_2-Clause-green.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+      break;
+  case license = 'GNUAGPLv3':
+    licenseBadge = '[![License](https://img.shields.io/badge/License-GNUAGPLv3-green.svg)](https://www.gnu.org/licenses/GPL-3.0)';
+    break;
+  case license = 'BSD-3-Clause':
+    licenseBadge = '[![License](https://img.shields.io/badge/License-BSD_3.0-Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+    break;
+  case license = 'GNULGPLv3':
+      licenseBadge = '[![License](https://img.shields.io/badge/License-GNULGPLv3-green.svg)](https://www.gnu.org/licenses/LGPL-3.0)';
+      break;
+  case license = 'Apache-2.0':
+    licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)';
+    break;
+  case license = 'Mozilla-v2.0':
+    licenseBadge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-green.svg)](https://opensource.org/licenses/MPL-2.0)';
+    break;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -26,7 +35,7 @@
 function generateMarkdown(data) {
   return`# ${data.title}
 ### License:
-![License] 
+${licenseBadge} 
 ### License Description:
 [Click here for the most current description of this license]
 ### Link to deployed project:
@@ -63,3 +72,5 @@ If you have any questions contact me on [GitHub](https://github.com/${data.usern
 module.exports = {
   generateMarkdown
 };
+
+}
