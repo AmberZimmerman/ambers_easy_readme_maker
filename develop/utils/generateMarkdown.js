@@ -1,4 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+function generateMarkdown(data) {
 const generateBadge = () => {
 
 let licenseBadge;
@@ -32,8 +34,8 @@ switch (license) {
 // function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return`# ${data.title}
+
+return`# ${data.title}
 ### License:
 ${licenseBadge} 
 ### License Description:
@@ -65,12 +67,11 @@ In order to test open the console and run the following:
 If you have any questions contact me on [GitHub](https://github.com/${data.username}) 
 ### Screenshot:
 ![My Image](${data.screenshot}) 
-`  ;
-}
+` 
 
+}}
 
 module.exports = {
   generateMarkdown
 };
 
-}
