@@ -1,6 +1,6 @@
 # Project Title
 ### License:
-![License] 
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 ### License Description:
 [Click here for the most current description of this license]
 ### Link to deployed project:
@@ -18,7 +18,7 @@ Link for the deployed project is unavailable
 General description here
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
-```undefined```
+```No installation required at this time```
 ### Usage Instructions:
 usage here
 ### Contribution Guidelines:

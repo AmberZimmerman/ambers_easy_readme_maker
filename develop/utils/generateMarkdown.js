@@ -1,8 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 
-function generateMarkdown(data) {
-const generateBadge = () => {
-
+const generateMarkdown = ({name, username, title, deployed, license, description, installation, usage, contributing, tests, screenshot}) => {
 let licenseBadge;
 
 switch (license) {
@@ -35,13 +33,13 @@ switch (license) {
 
 // TODO: Create a function to generate markdown for README
 
-return`# ${data.title}
+return`# ${title}
 ### License:
 ${licenseBadge} 
 ### License Description:
 [Click here for the most current description of this license]
 ### Link to deployed project:
-${data.deployed}
+${deployed}
 ## Table of Contents: 
 * [Description](#description)
 * [Installation](#installation)
@@ -52,24 +50,24 @@ ${data.deployed}
 * [Questions](#questions)
 * [Screenshots](#screenshot)
 ### Description of the project:
-${data.description}
+${description}
 ### Installation:
 In order to install the necessary dependencies, open the console and run the following:
-\`\`\`${data.installations}\`\`\`
+\`\`\`${installation}\`\`\`
 ### Usage Instructions:
-${data.usage}
+${usage}
 ### Contribution Guidelines:
-${data.contributing}
+${contributing}
 ### Tests:
 In order to test open the console and run the following:
-\`\`\`${data.tests}\`\`\`
+\`\`\`${tests}\`\`\`
 ### Questions:
-If you have any questions contact me on [GitHub](https://github.com/${data.username}) 
+If you have any questions contact me on [GitHub](https://github.com/${username}) 
 ### Screenshot:
-![My Image](${data.screenshot}) 
+![My Image](${screenshot}) 
 ` 
 
-}}
+}
 
 module.exports = {
   generateMarkdown
