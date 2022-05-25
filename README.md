@@ -8,10 +8,6 @@
 
 [Click here for the most current description of this license](https://opensource.org/licenses/MIT)
 
-### Link to deployed project:
-
-Link for the deployed project is unavailable
-
 ### Link to the video walkthrough:
 
 [Walthrough Video](https://youtu.be/dgG3QxZduiQ)
